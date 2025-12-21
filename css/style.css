@@ -9,7 +9,13 @@ html, body {
 .snap-container {
     height: 100vh;
     overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     scroll-snap-type: y mandatory;
+}
+
+.snap-container::-webkit-scrollbar {
+    display: none;
 }
 
 .snap-section {
@@ -22,6 +28,13 @@ html, body {
     font-size: 2vw;
     margin: 0;
     color: #BF8445;
+}
+
+.landing-heading {
+    font-family: capriola;
+    font-weight: 100;
+    margin: 0;
+    color: #c06300;
 }
 
 /* ID STYLING */
@@ -69,6 +82,7 @@ html, body {
 #hand-wave {
     width: 2vw;
     height: 2vw;
+    padding-right: 0.5vw;
 }
 
 #left-text {
@@ -81,23 +95,16 @@ html, body {
 }
 
 #landing-heading-name {
-    font-family: capriola;
     font-size: 3vw;
-    font-weight: 100;
-    margin: 0;
-    color: #c06300;
-}
-
-#animation-container {
-    height: 50%;
 }
 
 #landing-heading-title {
     font-family: capriola;
     font-size: 2.5vw;
-    font-weight: 100;
-    margin: 0;
-    color: #c06300;
+}
+
+#animation-container {
+    height: 50%;
 }
 
 /* Assets */
