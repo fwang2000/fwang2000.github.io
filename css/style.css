@@ -1,0 +1,117 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* CLASS STYLING */
+
+.snap-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.snap-section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.landing-para {
+    font-family: mali-italic;
+    font-size: 2vw;
+    margin: 0;
+    color: #BF8445;
+}
+
+/* ID STYLING */
+
+#landing {
+    background-color: #d9d9d9;
+    position: relative;
+}
+
+#landing-header {
+    font-family: geologica-bold;
+    color: #bf8445;
+    font-size: 2vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#landing-navbar {
+    float: right;
+}
+
+#landing-name {
+    padding-left: 1em;
+}
+
+#landing-list {
+    display: flex;
+    padding-right: 1.5em;
+    gap: 1.5em;
+    list-style-type: none;
+}
+
+#landing-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#hand-wave {
+    width: 2vw;
+    height: 2vw;
+}
+
+#left-text {
+    text-align: right;
+}
+
+#left-text-para {
+    display: flex;
+    align-items: center;
+}
+
+#landing-heading-name {
+    font-family: capriola;
+    font-size: 3vw;
+    font-weight: 100;
+    margin: 0;
+    color: #c06300;
+}
+
+#animation-container {
+    height: 50%;
+}
+
+#landing-heading-title {
+    font-family: capriola;
+    font-size: 2.5vw;
+    font-weight: 100;
+    margin: 0;
+    color: #c06300;
+}
+
+/* Assets */
+@font-face {
+    font-family: geologica-bold;
+    src: url(../assets/fonts/Geologica/Geologica-Bold.ttf);
+}
+
+@font-face {
+    font-family: capriola;
+    src: url(../assets/fonts/Capriola/Capriola-Regular.ttf);
+}
+
+@font-face {
+    font-family: mali-italic;
+    src: url(../assets/fonts/Mali/Mali-Italic.ttf);
+}

@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <p>FRANK WANG</p>
-        <nav>
-            <ul>
-                <li>About Me</li>
-                <li>Education</li>
-                <li>Work Experience</li>
-                <li>Hobbies</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-    </header>
-    <section id="landing">
-        <div id="left-text">
-            <p>Hey there! My name is</p>
-            <h1>Frank Wang</h1>
-        </div>
-        <div id="animation">
-            <img src="assets/images/bedroom-temp.png">
-        </div>
-        <div id="right-text">
-            <p>And I am a</p>
-            <h1>Software Developer</h1>
-        </div>
-    </section>
+    <head>
+        <title>Frank Wang - Software Developer</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <main class="snap-container">
+            <section class="snap-section" id="landing">
+                <header id="landing-header">
+                    <p id="landing-name">FRANK WANG</p>
+                    <nav id="landing-navbar">
+                        <ul id="landing-list">
+                            <li>ABOUT</li>
+                            <li>EXPERIENCE</li>
+                            <li>PROJECTS</li>
+                            <li>HOBBIES</li>
+                            <li>CONTACT</li>
+                        </ul>
+                    </nav>
+                </header>
+                <div id="landing-content">
+                    <div id="left-text">
+                        <div id="left-text-para">
+                            <img id="hand-wave" src="assets/images/hand-wave.png">
+                            <p class="landing-para">Hey there! My name is</p>
+                        </div>
+                        <h1 id="landing-heading-name">Frank Wang</h1>
+                    </div>
+                    <div id="animation-container">
+                        <img id="animation" src="assets/images/bedroom-temp.png">
+                    </div>
+                    <div id="right-text">
+                        <p class="landing-para">And I am a</p>
+                        <h1 id="landing-heading-title">Software Developer!</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="snap-section" id="about">
+                TODO
+            </section>
+            <section class="snap-section" id="education">
+                TODO
+            </section>
+            <section class="snap-section" id="work-experience">
+                TODO
+            </section>
+        </main>
+    </body>
 </html>
