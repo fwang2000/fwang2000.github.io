@@ -87,6 +87,13 @@ html, body {
 
 #left-text {
     text-align: right;
+    align-self: center;
+    transform: translateY(-9vh);
+}
+
+#right-text {
+    align-self: center;
+    transform: translateY(9vh);
 }
 
 #left-text-para {
@@ -104,7 +111,34 @@ html, body {
 }
 
 #animation-container {
-    height: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#animation {
+    height: 55vh;
+    width: auto;
+}
+
+#up-to-text {
+    position: absolute;
+    align-self: center;
+    text-align: justify;
+    top: -2vw;
+    right: -11vw;
+    font-size: 1.5vw;
+    white-space: nowrap;
+}
+
+#scroll-hint {
+    position: absolute;
+    font-size: 1.5vw;
+    text-align: center;
+    align-self: center;
+    left: 25%;
+    transform: translateY(20vh)
 }
 
 /* Assets */
