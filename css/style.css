@@ -4,8 +4,6 @@ html, body {
     scroll-behavior: smooth;
 }
 
-/* CLASS STYLING */
-
 .snap-container {
     height: 100vh;
     overflow-y: scroll;
@@ -23,6 +21,8 @@ html, body {
     scroll-snap-align: start;
 }
 
+/* LANDING SECTION CLASSES*/
+
 .landing-para {
     font-family: mali-italic;
     font-size: 2vw;
@@ -37,14 +37,13 @@ html, body {
     color: #c06300;
 }
 
-/* ID STYLING */
+/* LANDING SECTION IDS */
 
 #landing {
     background-color: #d9d9d9;
-    position: relative;
 }
 
-#landing-header {
+#landing-nav-header {
     font-family: geologica-bold;
     color: #bf8445;
     font-size: 2vh;
@@ -52,7 +51,7 @@ html, body {
     justify-content: space-between;
 }
 
-#landing-navbar {
+#landing-nav-bar {
     float: right;
 }
 
@@ -110,6 +109,20 @@ html, body {
     font-size: 2.5vw;
 }
 
+#keep-scrolling-group {
+    position: absolute;
+    bottom: -10%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#keep-scrolling-text {
+    font-size: 1.5vw;
+    text-align: center;
+}
+
 #animation-container {
     position: relative;
     display: flex;
@@ -122,23 +135,22 @@ html, body {
     width: auto;
 }
 
-#up-to-text {
+#up-to-group {
     position: absolute;
-    align-self: center;
-    text-align: justify;
-    top: -2vw;
-    right: -11vw;
-    font-size: 1.5vw;
-    white-space: nowrap;
+    display: flex;
+    right: -15vw;
+    top: -5vh;
 }
 
-#scroll-hint {
-    position: absolute;
+#up-to-text {
     font-size: 1.5vw;
-    text-align: center;
-    align-self: center;
-    left: 25%;
-    transform: translateY(20vh)
+    white-space: nowrap;
+    transform: translate(0.5vw, -0.8vw);
+}
+
+#up-to-arrow {
+   width: auto;
+   height: auto;
 }
 
 /* Assets */
