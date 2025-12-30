@@ -4,6 +4,40 @@ html, body {
     scroll-behavior: smooth;
 }
 
+body[data-theme="sunny"] {
+    --background-color: #f3efe8;
+    --main-text-color: #ac6416;
+    --sub-text-color: #bf8445;
+}
+
+body[data-theme="rainy"] {
+    --background-color: #515f7a;
+    --main-text-color: #8290ac;
+    --sub-text-color: #93b5c5;
+}
+
+body[data-theme="cloudy"] {
+    --background-color: #232630;
+    --main-text-color: #9ba4a4;
+    --sub-text-color: #969996;
+}
+
+body[data-theme="snowy"] {
+    --background-color: #ffffff;
+    --main-text-color: #9ba9d0;
+    --sub-text-color: #a3dfff;
+}
+
+body[data-theme="night"] {
+    --background-color: #080c0d;
+    --main-text-color: #8e74a5;
+    --sub-text-color: #654368;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
 .snap-container {
     height: 100vh;
     overflow-y: scroll;
@@ -19,6 +53,15 @@ html, body {
 .snap-section {
     height: 100vh;
     scroll-snap-align: start;
+    background-color: var(--background-color);
+}
+
+.main-text-color {
+    color: var(--main-text-color);
+}
+
+.sub-text-color {
+    color: var(--sub-text-color);
 }
 
 /* LANDING SECTION CLASSES*/
@@ -27,26 +70,22 @@ html, body {
     font-family: mali-italic;
     font-size: 2vw;
     margin: 0;
-    color: #BF8445;
 }
 
 .landing-heading {
     font-family: capriola;
     font-weight: 100;
     margin: 0;
-    color: #c06300;
 }
 
 /* LANDING SECTION IDS */
 
 #landing {
-    background-color: #d9d9d9;
     position: relative;
 }
 
 #landing-nav-header {
     font-family: geologica-bold;
-    color: #bf8445;
     font-size: 2vh;
     display: flex;
     justify-content: space-between;
