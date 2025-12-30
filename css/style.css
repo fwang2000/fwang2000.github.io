@@ -151,7 +151,7 @@ a:link, a:visited, a:hover, a:active {
 
 #keep-scrolling-group {
     position: absolute;
-    bottom: -10%;
+    bottom: -20%;
     left: 15%;
     display: flex;
     flex-direction: column;
@@ -161,6 +161,11 @@ a:link, a:visited, a:hover, a:active {
 #keep-scrolling-text {
     font-size: 1.5vw;
     text-align: center;
+}
+
+#keep-scrolling-arrow {
+    border-left: 0.25vw dotted var(--sub-text-color);
+    height: 20vw;
 }
 
 #animation-container {
@@ -175,22 +180,13 @@ a:link, a:visited, a:hover, a:active {
     width: auto;
 }
 
-#up-to-group {
+#up-to-text {
     position: absolute;
     display: flex;
-    right: -15vw;
-    top: -5vh;
-}
-
-#up-to-text {
+    right: -10vw;
+    top: 0vh;
     font-size: 1.5vw;
     white-space: nowrap;
-    transform: translate(0.5vw, -0.8vw);
-}
-
-#up-to-arrow {
-   width: auto;
-   height: auto;
 }
 
 /* Assets */
