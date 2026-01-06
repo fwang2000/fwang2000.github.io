@@ -4,6 +4,7 @@
         <title>Frank Wang - Software Developer</title>
         <link rel="stylesheet" href="css/style.css">
         <script type="module" src="js/theme_modifier.js" defer></script>
+        <script src="js/ui/carousel_controller.js" defer></script>
     </head>
     <body>
         <main class="snap-container">
@@ -30,34 +31,62 @@
                     </div>
                     <div id="animation-container">
                         <img id="animation" src="assets/images/bedroom-temp.png">
-                        <p class="landing-para sub-text-color" id="up-to-text">What am I up to?</p>                   
+                        <p class="landing-para sub-text-color" id="up-to-text">What am I up to?</p>  
+                        <a id="keep-scrolling-arrow-container" href="#about"><div class="arrow" id="keep-scrolling-arrow"></div></a>
                     </div>
                     <div id="right-text">
                         <p class="landing-para sub-text-color">And I am a</p>
                         <h1 class="landing-heading main-text-color" id="landing-heading-title">Software Developer!</h1>
                     </div>
                 </div>
-                <div id="keep-scrolling-group">
-                    <div class="landing-para sub-text-color" id="keep-scrolling-text">
-                        <p>Keep scrolling to<br>find out more!</p>
-                    </div>
-                    <div id="keep-scrolling-arrow"></div>
+            </section>
+            <section class="snap-section" id="carousel">
+                <div id="prev-button-container">
+                    <button class="arrow" id="carousel-prev-button"></button>
                 </div>
-            </section>
-            <section class="snap-section" id="about">
-                TODO
-            </section>
-            <section class="snap-section" id="experience">
-                TODO
-            </section>
-            <section class="snap-section" id="projects">
-                TODO
-            </section>
-            <section class="snap-section" id="hobbies">
-                TODO
-            </section>
-            <section class="snap-section" id="contact">
-                TODO
+                <div id="carousel-viewport">
+                    <ul id="carousel-wrapper">
+                        <li class="carousel-item" id="about">
+                            <div id="about-container">
+                                <div id="profile-photo-container">
+                                    <img id="profile-photo" src="assets/images/profile.JPG">
+                                </div>
+                                <div>
+                                    <h1 class="main-text-color">ABOUT ME</h1>
+                                    <p class="sub-text-color" id="about-me-body">
+                                        I am a <strong>full-stack software developer</strong> currently based in <strong>Vancouver, BC</strong> with <strong>3+ years of experience</strong> building secure and scalable applications across web and mobile. I've gained experience across the tech stack, working on firmware modems and embedded systems at Sierra Wireless to delivering large-scale full-stack authentication and shopping platforms at Amazon. I love tackling complex problems, and designing creative solutions that work! Even when I'm not coding, I'm often building games, exploring new tech, or tinkering with side projects and hobbies that challenge me to learn something new!
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item" id="experience">
+                            <h1 class="main-text-color">EXPERIENCE</h1>
+                        </li>
+                        <li class="carousel-item" id="projects">
+                            <h1 class="main-text-color">PROJECTS</h1>
+                        </li>
+                        <li class="carousel-item" id="hobbies">
+                            <h1 class="main-text-color">HOBBIES</h1>
+                        </li>
+                        <li class="carousel-item" id="contact">
+                            <h1 class="main-text-color">CONTACT</h1>
+                            <ul id="contact-list">
+                                <li id="email">
+                                    <p class="sub-text-color">fwang1188@gmail.com</p>
+                                </li>
+                                <li id="linkedin">
+                                    <p class="sub-text-color">linkedin.com/in/frank-wang-1a5988170/</p>
+                                </li>
+                                <li id="github">
+                                    <p class="sub-text-color">github.com/fwang2000/</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="next-button-container">
+                    <button class="arrow" id="carousel-next-button"></button>
+                </div>
             </section>
         </main>
     </body>

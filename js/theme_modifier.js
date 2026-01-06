@@ -1,6 +1,6 @@
 import { WEATHER_CODES } from "./enums/weather_codes.js";
 import { WEATHER_TYPE } from "./enums/weather_type.js";
-import { getWeather } from "./realtime_weather.js";
+import { getWeather } from "./api/realtime_weather.js";
 
 const WEATHER_CODE_TO_TYPE = [
     { code: WEATHER_CODES.SUNNY, type: WEATHER_TYPE.SUNNY },
@@ -14,7 +14,8 @@ function mapConditionToWeatherType(data) {
     if (!currentWeather.is_day) {
         return WEATHER_TYPE.NIGHT;
     } else {
-        currentWeatherCode = currentWeather.condition.code;
+        let currentWeatherCode = currentWeather.condition.code;
+        console.log("Current Weather Code: ", currentWeatherCode);
         return WEATHER_CODE_TO_TYPE.find(entry => entry.code.includes(currentWeatherCode))?.type ?? WEATHER_TYPE.CLOUDY;
     }
 }
