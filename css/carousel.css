@@ -1,0 +1,65 @@
+/* Carousel container: viewport, wrapper, prev/next buttons, slide items. */
+
+/* Classes */
+
+.carousel-item {
+    scroll-snap-align: center;
+    flex: 0 0 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* IDs */
+
+#carousel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#carousel-viewport {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    flex: 1;
+}
+
+#carousel-wrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    transition: transform 0.5s ease;
+}
+
+#prev-button-container {
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+}
+
+#carousel-prev-button {
+    background: none;
+    border-width: 0 0 0.4vh 0.4vh;
+}
+
+#carousel-prev-button:hover {
+    border-width: 0 0 0.6vh 0.6vh;
+}
+
+#next-button-container {
+    display: flex;
+    align-items: center;
+    padding-right: 2vw;
+}
+
+#carousel-next-button {
+    background: none;
+    border-width: 0.4vh 0.4vh 0 0;
+}
+
+#carousel-next-button:hover {
+    border-width: 0.6vh 0.6vh 0 0;
+}

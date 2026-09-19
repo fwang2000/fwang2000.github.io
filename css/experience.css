@@ -1,0 +1,160 @@
+/* Experience slide: horizontal, scroll-driven timeline with faded edges. */
+
+.experience-content {
+    align-self: center;
+    width: 90vw;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.experience-content h1 {
+    margin-bottom: 2.5rem;
+}
+
+.timeline-scroll {
+    --fade-l: 0px;
+    --fade-r: 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--sub-text-color) transparent;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--fade-l), #000 calc(100% - var(--fade-r)), transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 var(--fade-l), #000 calc(100% - var(--fade-r)), transparent 100%);
+}
+
+.timeline-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.timeline-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.timeline-scroll::-webkit-scrollbar-thumb {
+    background: var(--sub-text-color);
+    border-radius: 4px;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: calc(2.75rem - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--sub-text-color);
+    opacity: 0.35;
+    z-index: 0;
+}
+
+.timeline-item {
+    flex: 0 0 clamp(13rem, 22vw, 18rem);
+    display: grid;
+    grid-template-rows: 2rem 1.5rem auto;
+    justify-items: center;
+    align-content: start;
+    text-align: center;
+    padding: 0 0.75rem;
+}
+
+.timeline-date {
+    font-family: geologica-bold;
+    font-size: 0.95rem;
+}
+
+.timeline-dot {
+    align-self: center;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: var(--main-text-color);
+    border: 3px solid var(--background-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-title {
+    font-family: capriola;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.timeline-org {
+    font-family: geologica-bold;
+    font-size: 0.9rem;
+    margin: 0 0 1rem;
+}
+
+.timeline-desc {
+    font-family: mali-italic;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--sub-text-color);
+    margin: 0;
+}
+
+.timeline-desc-list {
+    text-align: left;
+    margin: 0.25rem 0 0;
+    padding-left: 1.1rem;
+    list-style-type: none;
+}
+
+.timeline-desc-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Experience ids */
+
+.ubc-text {
+    color: #0C2344;
+}
+
+.ubc-dot {
+    background: #0C2344;
+    border: 3px solid var(--background-color);
+}
+
+.ubc-logo {
+    height: 4vw;
+    width: auto;
+}
+
+.sierra-wireless-text {
+    color: #E53B30;
+}
+
+.sierra-wireless-dot {
+    background: #E53B30;
+    border: 3px solid var(--background-color);
+}
+
+.sierra-wireless-logo {
+    height: 4vw;
+    width: auto;
+}
+
+.amazon-text {
+    color: #F6903A;
+}
+
+.amazon-dot {
+    background: #F6903A;
+    border: 3px solid var(--background-color);
+}
+
+.experience-logo {
+    height: 4vw;
+    width: auto;
+}

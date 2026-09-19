@@ -1,4 +1,4 @@
-const API_KEY = '7783b3d74dee407bb4941150252612';
+const API_KEY = 'f67b70b7a9d34de48e011510261809';
 const API_BASE_URL = 'https://api.weatherapi.com/v1';
 const API_CURRENT_WEATHER = '/current.json';
 const CACHE_KEY = 'weather-data';

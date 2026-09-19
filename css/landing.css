@@ -1,0 +1,108 @@
+/* Landing section: nav header, hero (image + name), scroll-down arrow. */
+
+/* Classes */
+
+.landing-para {
+    font-size: 2vw;
+    margin: 0;
+}
+
+.landing-heading {
+    font-family: capriola;
+    font-weight: 100;
+    margin: 0;
+}
+
+/* IDs */
+
+#landing {
+    position: relative;
+}
+
+#landing-nav-header {
+    font-family: geologica-bold;
+    font-size: 2vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#landing-nav-bar {
+    float: right;
+}
+
+#landing-name {
+    font-family: geologica-bold;
+    padding-left: 1em;
+}
+
+#landing-list {
+    display: flex;
+    padding-right: 1.5em;
+    gap: 1.5em;
+    list-style-type: none;
+}
+
+#landing-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    width: 100%;
+}
+
+#hand-wave {
+    width: 2vw;
+    height: 2vw;
+    padding-right: 0.5vw;
+}
+
+#landing-text {
+    text-align: left;
+    align-self: center;
+}
+
+#left-text-para {
+    display: flex;
+    align-items: center;
+}
+
+#landing-heading-name {
+    font-size: 4vw;
+}
+
+#landing-heading-title {
+    font-family: capriola;
+    font-size: 2.5vw;
+}
+
+#keep-scrolling-arrow-container {
+    position: absolute;
+    bottom: 6vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#keep-scrolling-arrow {
+    border-width: 0 0.4vh 0.4vh 0;
+}
+
+#keep-scrolling-arrow:hover {
+    border-width: 0vh 0.6vh 0.6vh 0;
+}
+
+#animation-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#animation {
+    height: 20vw;
+    width: auto;
+}

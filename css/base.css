@@ -1,0 +1,102 @@
+/* Global resets, theme variables, shared element/utility styles, fonts. */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body[data-theme="sunny"] {
+    --background-color: #FFF7D6;
+    --main-text-color: #172B4D;
+    --sub-text-color: #53657A;
+}
+
+body[data-theme="rainy"] {
+    --background-color: #DCE8F0;
+    --main-text-color: #162B3A;
+    --sub-text-color: #526A78;
+}
+
+body[data-theme="cloudy"] {
+    --background-color: #EAF0F4;
+    --main-text-color: #1E2A35;
+    --sub-text-color: #52616D;
+}
+
+body[data-theme="snowy"] {
+    --background-color: #F3F7FA;
+    --main-text-color: #1D3040;
+    --sub-text-color: #536775;
+}
+
+body[data-theme="night"] {
+    --background-color: #172033;
+    --main-text-color: #F4F7FA;
+    --sub-text-color: #B7C3D0;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: capriola;
+}
+
+p {
+    font-family: mali-italic;
+}
+
+.snap-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.snap-container::-webkit-scrollbar {
+    display: none;
+}
+
+.snap-section {
+    height: 100vh;
+    scroll-snap-align: start;
+    background-color: var(--background-color);
+}
+
+.main-text-color {
+    color: var(--main-text-color);
+}
+
+.sub-text-color {
+    color: var(--sub-text-color);
+}
+
+.arrow {
+    box-sizing: border-box;
+    height: 3vh;
+    width: 3vh;
+    border-style: solid;
+    border-color: var(--sub-text-color);
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+}
+
+/* Assets */
+@font-face {
+    font-family: geologica-bold;
+    src: url(../assets/fonts/Geologica/Geologica-Bold.ttf);
+}
+
+@font-face {
+    font-family: capriola;
+    src: url(../assets/fonts/Capriola/Capriola-Regular.ttf);
+}
+
+@font-face {
+    font-family: mali-italic;
+    src: url(../assets/fonts/Mali/Mali-Italic.ttf);
+}
