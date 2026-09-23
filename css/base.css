@@ -65,14 +65,17 @@ p {
     height: 100vh;
     scroll-snap-align: start;
     background-color: var(--background-color);
+    transition: background-color 500ms ease;
 }
 
 .main-text-color {
     color: var(--main-text-color);
+    transition: color 500ms ease;
 }
 
 .sub-text-color {
     color: var(--sub-text-color);
+    transition: color 500ms ease;
 }
 
 .arrow {

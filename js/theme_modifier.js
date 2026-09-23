@@ -20,17 +20,71 @@ function mapConditionToWeatherType(data) {
     }
 }
 
+// True once the visitor manually selects a theme, so the async weather
+// result (which resolves later) won't clobber their choice.
+let userPickedTheme = false;
+
+function applyTheme(weatherType) {
+    document.body.setAttribute("data-theme", weatherType);
+    markActiveTheme(weatherType);
+}
+
+// Marks the option matching the active theme with a checkmark. No-op until
+// the picker markup exists (weather may resolve before the partial injects).
+function markActiveTheme(theme) {
+    document.querySelectorAll(".theme-option").forEach((btn) => {
+        btn.classList.toggle("is-active", btn.dataset.themeValue === theme);
+    });
+}
+
 function setTheme() {
 
     let weatherType;
 
     getWeather().then(data => {
         weatherType = mapConditionToWeatherType(data);
-        document.body.setAttribute("data-theme", weatherType);
+        if (!userPickedTheme) {
+            applyTheme(weatherType);
+        }
     }).catch(err => {
         console.log(err);
         weatherType = WEATHER_TYPE.CLOUDY;
     });
 }
 
+function initThemePicker() {
+    const toggle = document.getElementById("theme-toggle");
+    const options = document.getElementById("theme-options");
+    const modifier = document.getElementById("theme-modifier");
+    if (!toggle || !options || !modifier) return;
+
+    const setOpen = (open) => {
+        toggle.setAttribute("aria-expanded", String(open));
+    };
+
+    toggle.addEventListener("click", () => {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    options.querySelectorAll(".theme-option").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            userPickedTheme = true;
+            applyTheme(btn.dataset.themeValue);
+            setOpen(false);
+        });
+    });
+
+    // Close when clicking anywhere outside the modifier.
+    document.addEventListener("click", (e) => {
+        if (!modifier.contains(e.target)) {
+            setOpen(false);
+        }
+    });
+
+    // Reflect whatever theme is already applied (e.g. from weather).
+    markActiveTheme(document.body.getAttribute("data-theme"));
+}
+
 setTheme();
+
+export { initThemePicker };

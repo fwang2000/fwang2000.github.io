@@ -1,5 +1,6 @@
 import { initCarousel } from "./ui/carousel_controller.js";
 import { initTimelineFade } from "./ui/timeline_fade.js";
+import { initThemePicker } from "./theme_modifier.js";
 
 // Carousel slide partials, in display order.
 const SLIDES = ["about", "experience", "projects", "hobbies", "contact"];
@@ -34,6 +35,9 @@ async function loadSections() {
     // Smooth-scroll for in-page anchors (e.g. the landing scroll arrow),
     // done in JS so it isn't interrupted by scroll-snap-type: mandatory.
     initAnchorScroll();
+
+    // Wire the "CHOOSE THEME" dropdown (landing partial is now in the DOM).
+    initThemePicker();
 }
 
 function initAnchorScroll() {

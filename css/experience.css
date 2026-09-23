@@ -154,7 +154,30 @@
     border: 3px solid var(--background-color);
 }
 
+/* Logo chip: only on dark themes, where dark-ink logos (UBC navy,
+   Amazon wordmark) would otherwise vanish. Light themes show logos bare. */
+body[data-theme="night"] .timeline-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 0.65rem;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+
 .experience-logo {
     height: 4vw;
     width: auto;
+    display: block;
+}
+
+/* Night-theme override: UBC's brand navy is illegible on the dark bg,
+   so lift it to a lighter periwinkle that keeps the blue family. */
+body[data-theme="night"] .ubc-text {
+    color: #8FA9D0;
+}
+
+body[data-theme="night"] .ubc-dot {
+    background: #8FA9D0;
 }

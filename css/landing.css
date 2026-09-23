@@ -98,11 +98,89 @@
 #animation-container {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    gap: 0.8vw;
 }
 
 #animation {
     height: 20vw;
     width: auto;
+}
+
+/* Theme modifier (under the landing image) */
+
+#theme-modifier {
+    position: relative;
+    font-family: geologica-bold;
+    font-size: 1.5vh;
+    text-align: center;
+}
+
+#theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin: 0 auto;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    letter-spacing: 0.04em;
+}
+
+#theme-toggle-icon::before {
+    content: "\25BE";
+}
+
+#theme-toggle[aria-expanded="true"] #theme-toggle-icon::before {
+    content: "\2715";
+}
+
+#theme-options {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    list-style: none;
+    margin: 0.6em 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 300ms ease, opacity 250ms ease;
+}
+
+#theme-toggle[aria-expanded="true"] + #theme-options {
+    max-height: 20em;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.theme-option {
+    white-space: nowrap;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    letter-spacing: 0.04em;
+    transition: color 200ms ease;
+}
+
+.theme-option.is-active::after {
+    content: "\00a0\2713";
+}
+
+#theme-toggle:hover #theme-toggle-label,
+#theme-toggle:hover #theme-toggle-icon,
+.theme-option:hover {
+    color: var(--main-text-color);
 }
