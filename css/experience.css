@@ -126,11 +126,6 @@
     border: 3px solid var(--background-color);
 }
 
-.ubc-logo {
-    height: 4vw;
-    width: auto;
-}
-
 .sierra-wireless-text {
     color: #E53B30;
 }
@@ -140,11 +135,6 @@
     border: 3px solid var(--background-color);
 }
 
-.sierra-wireless-logo {
-    height: 4vw;
-    width: auto;
-}
-
 .amazon-text {
     color: #F6903A;
 }
@@ -152,6 +142,12 @@
 .amazon-dot {
     background: #F6903A;
     border: 3px solid var(--background-color);
+}
+
+.experience-logo {
+    height: 4vw;
+    width: auto;
+    display: block;
 }
 
 /* Logo chip: only on dark themes, where dark-ink logos (UBC navy,
@@ -164,12 +160,6 @@ body[data-theme="night"] .timeline-icon {
     background: #ffffff;
     border-radius: 0.5rem;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
-}
-
-.experience-logo {
-    height: 4vw;
-    width: auto;
-    display: block;
 }
 
 /* Night-theme override: UBC's brand navy is illegible on the dark bg,
