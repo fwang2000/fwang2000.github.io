@@ -40,6 +40,15 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
+/* Keep visited links on-theme (defeat the browser's fixed visited color). */
+a.main-text-color:visited {
+    color: var(--main-text-color);
+}
+
+a.sub-text-color:visited {
+    color: var(--sub-text-color);
+}
+
 h1 {
     font-family: capriola;
 }
