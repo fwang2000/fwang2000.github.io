@@ -1,3 +1,130 @@
 <li class="carousel-item" id="projects">
-    <h1 class="main-text-color">PROJECTS</h1>
+    <div id="projects-container">
+        <h1 class="main-text-color">PROJECTS</h1>
+
+        <div id="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card courtiq-card" role="button" tabindex="0" aria-label="Open Court IQ project">
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <span><img class="project-logo" src="assets/images/courtiq.png"></span>
+                        <h3 class="project-title court-iq-title">CourtIQ</h3>
+                        <p class="project-date court-iq-date">September 2026 &ndash; Present</p>
+                        <span class="project-flip-hint">click to open</span>
+                    </div>
+                    <div class="project-card-back">
+                        <div class="project-back-head">
+                            <h3 class="project-back-title court-iq-title">CourtIQ</h3>
+                            <button type="button" class="project-close" aria-label="Close project">&times;</button>
+                        </div>
+                        <div class="project-columns">
+                            <div class="project-col">
+                                <h4>Description</h4>
+                                <p class="project-desc courtiq-desc">
+                                    An LLM-driven Basketball Analyst &mdash; a personal full-stack NBA analytics webapp I am designing and building that converts raw box-score and advanced stats into a nuanced and conversational scouting experience.
+                                    Users are able to search for players to get a grounded profile, compare players head-to-head on effectiveness and dive deep into team-level analysis.
+                                </p>
+                                <h4>Tools</h4>
+                                <ul class="project-desc courtiq-desc courtiq-list">
+                                    <li><strong>Backend:</strong> Python, FastAPI, SQLite, Pydantic</li>
+                                    <li><strong>Frontend:</strong> Next.js, TypeScript, React</li>
+                                    <li><strong>ML/Analytics:</strong> Unsupervised clustering for player archetypes</li>
+                                    <li><strong>AI Integration:</strong> LLM tool-calling grounded in typed data tools</li>
+                                    <li><strong>API Design:</strong> RESTful design for player/team search, profiles, comparisons, and trends</li>
+                                </ul>
+                            </div>
+                            <div class="project-col-divider"></div>
+                            <div class="project-col">
+                                <h4>Artifacts</h4>
+                                <div class="project-artifacts">
+                                    <a href="https://github.com/fwang2000/CourtIQ" target="_blank">
+                                        <span class="artifact-tile">
+                                            <img class="project-icon" src="assets/images/github.png"/>
+                                        </span>
+                                    </a>
+                                    <span class="artifact-tile">Under Development</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card gamesetmatch-card" role="button" tabindex="0" aria-label="Open GameSetMatch project">
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <span><img class="project-logo" src="assets/images/gamesetmatch.png"></span>
+                        <h3 class="project-title gamesetmatch-title">Tournament Scheduling SAAS</h3>
+                        <p class="project-date gamesetmatch-date">January 2022 - May 2022</p>
+                        <span class="project-flip-hint">click to open</span>
+                    </div>
+                    <div class="project-card-back">
+                        <div class="project-back-head">
+                            <h3 class="project-back-title gamesetmatch-title">GameSetMatch</h3>
+                            <button type="button" class="project-close" aria-label="Close project">&times;</button>
+                        </div>
+                        <div class="project-columns">
+                            <div class="project-col">
+                                <h4>Description</h4>
+                                <p class="project-desc courtiq-desc">
+                                    A full-stack tournament hosting and scheduling web app, built in a team of 6 as a sponsored capstone project with Amazon.
+                                    I owned the scheduling algorithm, modeling user matching as bipartite graph matching over player availabilities, then applied a greedy maximum-independent-set pass on the transformed graphs to generate schedules that supported availability, skill, and multiple tournament formats.
+                                    I tuned it to schedule the full 300-user base against peak tournament thresholds in under 4 seconds, and also contributed to the MySQL schema and React frontend.
+                                </p>
+                                <h4>Tools</h4>
+                                <ul class="project-desc courtiq-desc courtiq-list">
+                                    <li><strong>Backend:</strong> Java, Spring Boot, REST APIs, MySQL schema design</li>
+                                    <li><strong>Frontend:</strong> React, Firebase Authentication</li>
+                                    <li><strong>Algorithms:</strong> bipartite graph matching + greedy maximum independent set for constraint-based scheduling</li>
+                                    <li><strong>Cloud / deployment:</strong> AWS (Amplify frontend hosting, MySQL-backed service)</li>
+                                    <li><strong>Team & process:</strong> 6-person team, waterfall SDLC with full documentation (project plan, design docs, test plan) and sponsor delivery</li>
+                                </ul>
+                            </div>
+                            <div class="project-col-divider"></div>
+                            <div class="project-col">
+                                <h4>Artifacts</h4>
+                                <div class="project-artifacts">
+                                    <a class="artifact-tile" href="https://github.com/fwang2000/JavaArcade" target="_blank" rel="noopener">GitHub</a>
+                                    <span class="artifact-tile">Screenshot</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card vertigo-card" role="button" tabindex="0" aria-label="Open Portfolio Site project">
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <span><img class="project-logo vertigo-logo" src="assets/images/explorer.png"></span>
+                        <h3 class="project-title vertigo-title">VERTIGO</h3>
+                        <p class="project-date vertigo-date">January 2022 - June 2022</p>
+                        <span class="project-flip-hint">click to open</span>
+                    </div>
+                    <div class="project-card-back">
+                        <div class="project-back-head">
+                            <h3 class="project-back-title vertigo-title">VERTIGO</h3>
+                            <button type="button" class="project-close" aria-label="Close project">&times;</button>
+                        </div>
+                        <div class="project-columns">
+                            <div class="project-col">
+                                <h4>Description</h4>
+                                <p class="project-desc">This site. A dependency-free static site (vanilla HTML, CSS, and JS &mdash; no build step) with a live weather-driven color theme, a horizontally-scrolling carousel, and section partials fetched at runtime.</p>
+                            </div>
+                            <div class="project-col-divider"></div>
+                            <div class="project-col">
+                                <h4>Artifacts</h4>
+                                <div class="project-artifacts">
+                                    <a class="artifact-tile" href="https://github.com/fwang2000/fwang2000.github.io" target="_blank" rel="noopener">GitHub</a>
+                                    <a class="artifact-tile" href="https://fwang2000.github.io" target="_blank" rel="noopener">Live Site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </li>

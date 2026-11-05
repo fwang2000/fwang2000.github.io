@@ -1,5 +1,6 @@
 import { initCarousel } from "./ui/carousel_controller.js";
 import { initTimelineFade } from "./ui/timeline_fade.js";
+import { initProjects } from "./ui/projects_controller.js";
 import { initThemePicker } from "./theme_modifier.js";
 
 // Carousel slide partials, in display order.
@@ -31,6 +32,9 @@ async function loadSections() {
 
     // Edge-fade the timeline based on scroll position (also post-injection).
     initTimelineFade();
+
+    // Project flip cards (post-injection, same as the carousel).
+    initProjects();
 
     // Smooth-scroll for in-page anchors (e.g. the landing scroll arrow),
     // done in JS so it isn't interrupted by scroll-snap-type: mandatory.

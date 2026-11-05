@@ -1,1 +1,394 @@
-/* Projects slide styles. */
+/* Projects slide */
+
+#projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2rem, 5vh, 4rem);
+
+    width: 100%;
+    height: 100%;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+}
+
+#projects-container h1 {
+    margin: 0;
+}
+
+#projects-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 2.5vw, 2.5rem);
+
+    width: 100%;
+    max-width: 72rem;
+}
+
+/* --- Card shell (flip + perspective) --- */
+
+.project-card {
+    --card-accent: var(--sub-text-color);
+
+    flex: 0 0 clamp(13rem, 20vw, 19rem);
+    aspect-ratio: 3 / 4;
+
+    perspective: 1200px;
+    cursor: pointer;
+    outline: none;
+}
+
+.courtiq-card {
+    --card-bg: #000000;
+    --card-text: #F4F7FA;
+    --card-muted: #9FB0C3;
+    --card-line: rgba(244, 247, 250, 0.22);
+}
+
+.gamesetmatch-card {
+    --card-bg: #27293C;
+    --card-text: #F4F7FA;
+    --card-muted: #9FB0C3;
+    --card-line: rgba(244, 247, 250, 0.22);
+}
+
+.vertigo-card {
+    --card-bg: #11001C;
+    --card-text: #F4F7FA;
+    --card-muted: #9FB0C3;
+    --card-line: rgba(244, 247, 250, 0.22);
+}
+
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* Hover hint: a subtle tilt so the card previews that it can flip. */
+.project-card:not(.is-floating):hover .project-card-inner,
+.project-card:not(.is-floating):focus-visible .project-card-inner {
+    transform: rotateY(20deg);
+}
+
+/* Expanded: full flip to the detail (back) face. */
+.project-card.is-expanded .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+.project-card-front,
+.project-card-back {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 0.7rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+
+    background-color: var(--card-bg);
+    color: var(--card-text);
+
+    box-sizing: border-box;
+}
+
+/* --- Front (cover) face --- */
+
+.project-card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+
+    padding: 1.5rem;
+    text-align: center;
+
+    border: 1px solid color-mix(in srgb, var(--card-accent) 45%, transparent);
+    transition: border-color 500ms ease, box-shadow 300ms ease;
+}
+
+.project-card:not(.is-floating):hover .project-card-front {
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
+.project-emblem {
+    font-family: capriola;
+    font-size: 1.4rem;
+    letter-spacing: 0.15em;
+    color: var(--card-muted);
+    margin: 0 0 0.3rem;
+}
+
+/* Logo mark on the card front (e.g. Court IQ). Sized to the viewport so it
+   fits the card at any width; height follows aspect ratio. */
+.project-logo {
+    display: block;
+    width: clamp(6rem, 12vw, 9.5rem);
+    height: auto;
+    margin: 0 auto 0.5rem;
+}
+
+.vertigo-logo {
+    display: block;
+    width: clamp(4rem, 8vw, 6.5rem);
+    height: auto;
+    margin: 0 auto 0.5rem;
+}
+
+.project-title {
+    color: var(--card-text);
+    margin: 0;
+}
+
+.court-iq-title {
+    font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+    letter-spacing: 0.05em;
+    font-family: ibm-plex-mono-medium;
+}
+
+.gamesetmatch-title {
+    font-size: clamp(1.0rem, 1.3vw, 1.1rem);
+    letter-spacing: 0.02em;
+    font-family: maven-pro;
+}
+
+.vertigo-title {
+    font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+    letter-spacing: 0.05em;
+    font-family: dosis-extra-light;
+}
+
+.project-date {
+    font-size: 0.95rem;
+    color: var(--card-muted);
+    margin: 0;
+}
+
+.court-iq-date {
+    font-family: ibm-plex-mono-medium;
+}
+
+.gamesetmatch-date {
+    font-family: maven-pro;
+}
+
+.vertigo-date {
+    font-family: dosis-extra-light;
+}
+
+.project-flip-hint {
+    position: absolute;
+    bottom: 1.1rem;
+
+    font-family: geologica-bold;
+    font-size: 0.62rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--card-muted);
+
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.project-card:not(.is-floating):hover .project-flip-hint,
+.project-card:not(.is-floating):focus-visible .project-flip-hint {
+    opacity: 1;
+}
+
+/* --- Back (detail) face --- */
+
+.project-card-back {
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.3rem, 2.5vw, 2.6rem);
+    text-align: left;
+
+    border: 1px solid color-mix(in srgb, var(--card-accent) 45%, transparent);
+}
+
+.project-back-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.project-back-title {
+    font-size: clamp(1rem, 1.4vw, 1.35rem);
+    letter-spacing: 0.05em;
+    color: var(--card-text);
+    margin: 0;
+
+    /* Hidden until the card is large enough to warrant it. */
+    opacity: 0;
+    transition: opacity 250ms ease;
+}
+
+.project-icon {
+    width: clamp(2rem, 4vw, 2.5rem);
+    height: auto;
+}
+
+.project-card.is-expanded .project-back-title {
+    opacity: 1;
+}
+
+.project-close {
+    background: none;
+    border: none;
+    color: var(--card-text);
+    font-size: 1.9rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 0.3rem;
+    opacity: 0.65;
+    transition: opacity 200ms ease;
+}
+
+.project-close:hover {
+    opacity: 1;
+}
+
+.project-columns {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: clamp(1.2rem, 3vw, 3rem);
+    flex: 1;
+    min-height: 0;
+}
+
+.project-col {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--card-muted) transparent;
+}
+
+.project-col h4 {
+    font-family: geologica-bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--card-text);
+    margin: 1.1rem 0;
+}
+
+.project-col-divider {
+    width: 1px;
+    background: var(--card-line);
+    margin: 0.3rem 0;
+}
+
+.project-desc {
+    font-family: mali-italic;
+    font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+    line-height: 1.7;
+    color: var(--card-muted);
+}
+
+.courtiq-desc {
+    font-family: ibm-plex-mono-medium;
+    font-size: clamp(0.75rem, 0.8vw, 0.8rem);
+}
+
+.project-artifacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    align-content: start;
+}
+
+.artifact-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+
+    border: 1px solid var(--card-line);
+    border-radius: 0.5rem;
+
+    font-family: geologica-bold;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--card-muted);
+
+    transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+
+a.artifact-tile:hover {
+    color: var(--card-text);
+    border-color: var(--card-text);
+    background-color: color-mix(in srgb, var(--card-text) 10%, transparent);
+}
+
+/* --- FLIP / expand mechanics (geometry driven inline by JS) --- */
+
+.project-card.is-floating {
+    position: fixed;
+    z-index: 1000;
+    margin: 0;
+    aspect-ratio: auto;
+    transition:
+        top 550ms cubic-bezier(0.4, 0, 0.2, 1),
+        left 550ms cubic-bezier(0.4, 0, 0.2, 1),
+        width 550ms cubic-bezier(0.4, 0, 0.2, 1),
+        height 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card.is-floating .project-card-front,
+.project-card.is-floating .project-card-back {
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+}
+
+/* Slot placeholder keeps the row from collapsing while a card is floating. */
+.project-card-placeholder {
+    aspect-ratio: 3 / 4;
+}
+
+/* Backdrop: catches outside clicks; faint scrim to focus the expanded card. */
+#project-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+
+    background: rgba(8, 11, 20, 0);
+    transition: background 350ms ease;
+}
+
+#project-backdrop.is-visible {
+    background: rgba(8, 11, 20, 0.28);
+}
+
+/* Lock page scroll while a card is expanded. */
+body.project-open .snap-container {
+    overflow: hidden;
+}
+
+body.project-open #carousel-viewport {
+    overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-card-inner,
+    .project-card.is-floating,
+    #project-backdrop {
+        transition-duration: 1ms;
+    }
+
+    .project-card:not(.is-floating):hover .project-card-inner,
+    .project-card:not(.is-floating):focus-visible .project-card-inner {
+        transform: none;
+    }
+}

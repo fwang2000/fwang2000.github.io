@@ -112,3 +112,18 @@ p {
     font-family: mali-italic;
     src: url(../assets/fonts/Mali/Mali-Italic.ttf);
 }
+
+@font-face {
+    font-family: ibm-plex-mono-medium;
+    src: url(../assets/fonts/IBMPlexMono/IBMPlexMono-Medium.ttf);
+}
+
+@font-face {
+    font-family: maven-pro;
+    src: url(../assets/fonts/MavenPro/MavenPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: dosis-extra-light;
+    src: url(../assets/fonts/Dosis/Dosis-ExtraLight.ttf);
+}
