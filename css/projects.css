@@ -267,6 +267,7 @@
 
 .project-col {
     min-height: 0;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -293,12 +294,23 @@
 .project-desc {
     font-family: mali-italic;
     font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+    margin: 0;
     line-height: 1.7;
     color: var(--card-muted);
 }
 
 .courtiq-desc {
     font-family: ibm-plex-mono-medium;
+    font-size: clamp(0.75rem, 0.8vw, 0.8rem);
+}
+
+.gamesetmatch-desc {
+    font-family: maven-pro;
+    font-size: clamp(0.75rem, 0.8vw, 0.8rem);
+}
+
+.vertigo-desc {
+    font-family: dosis-extra-light;
     font-size: clamp(0.75rem, 0.8vw, 0.8rem);
 }
 
@@ -331,6 +343,53 @@ a.artifact-tile:hover {
     color: var(--card-text);
     border-color: var(--card-text);
     background-color: color-mix(in srgb, var(--card-text) 10%, transparent);
+}
+
+/* Full-width screenshot gallery (e.g. GameSetMatch): each tile spans the whole
+   artifacts column -- the width of one full row of tiles -- stacked in order
+   and scrolling within the column. */
+.project-artifacts-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-top: 1rem;
+}
+
+.artifact-photo-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.artifact-photo-title {
+    font-family: geologica-bold;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--card-muted);
+
+    transition: color 200ms ease;
+}
+
+.artifact-photo {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+
+    border: 1px solid var(--card-line);
+    border-radius: 0.5rem;
+
+    transition: border-color 200ms ease;
+}
+
+a.artifact-photo-link:hover .artifact-photo {
+    border-color: var(--card-text);
+}
+
+a.artifact-photo-link:hover .artifact-photo-title {
+    color: var(--card-text);
 }
 
 /* --- FLIP / expand mechanics (geometry driven inline by JS) --- */

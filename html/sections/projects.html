@@ -37,10 +37,8 @@
                             <div class="project-col">
                                 <h4>Artifacts</h4>
                                 <div class="project-artifacts">
-                                    <a href="https://github.com/fwang2000/CourtIQ" target="_blank">
-                                        <span class="artifact-tile">
-                                            <img class="project-icon" src="assets/images/github.png"/>
-                                        </span>
+                                    <a class="artifact-tile" href="https://github.com/fwang2000/CourtIQ" target="_blank" rel="noopener">
+                                        <img class="project-icon" src="assets/images/github.png"/>
                                     </a>
                                     <span class="artifact-tile">Under Development</span>
                                 </div>
@@ -67,13 +65,13 @@
                         <div class="project-columns">
                             <div class="project-col">
                                 <h4>Description</h4>
-                                <p class="project-desc courtiq-desc">
+                                <p class="project-desc gamesetmatch-desc">
                                     A full-stack tournament hosting and scheduling web app, built in a team of 6 as a sponsored capstone project with Amazon.
                                     I owned the scheduling algorithm, modeling user matching as bipartite graph matching over player availabilities, then applied a greedy maximum-independent-set pass on the transformed graphs to generate schedules that supported availability, skill, and multiple tournament formats.
                                     I tuned it to schedule the full 300-user base against peak tournament thresholds in under 4 seconds, and also contributed to the MySQL schema and React frontend.
                                 </p>
                                 <h4>Tools</h4>
-                                <ul class="project-desc courtiq-desc courtiq-list">
+                                <ul class="project-desc gamesetmatch-desc gamesetmatch-list">
                                     <li><strong>Backend:</strong> Java, Spring Boot, REST APIs, MySQL schema design</li>
                                     <li><strong>Frontend:</strong> React, Firebase Authentication</li>
                                     <li><strong>Algorithms:</strong> bipartite graph matching + greedy maximum independent set for constraint-based scheduling</li>
@@ -85,8 +83,38 @@
                             <div class="project-col">
                                 <h4>Artifacts</h4>
                                 <div class="project-artifacts">
-                                    <a class="artifact-tile" href="https://github.com/fwang2000/JavaArcade" target="_blank" rel="noopener">GitHub</a>
-                                    <span class="artifact-tile">Screenshot</span>
+                                    <a class="artifact-tile" href="https://github.com/fwang2000/GameSetMatch" target="_blank" rel="noopener">
+                                        <img class="project-icon" src="assets/images/github.png"/>
+                                    </a>
+                                    <a class="artifact-tile" href="https://drive.google.com/drive/folders/1bId6Rg4zb0uL7Ezb77iZXUIzljAkmmzU?usp=drive_link" target="_blank" rel="noopener">
+                                        <span>User Docs</span>
+                                    </a>
+                                </div>
+                                <div class="project-artifacts-gallery">
+                                    <a class="artifact-photo-link" href="assets/images/gamesetmatch-home.png" target="_blank" rel="noopener">
+                                        <span class="artifact-photo-title">Homepage</span>
+                                        <img class="artifact-photo" src="assets/images/gamesetmatch-home.png" alt="Homepage">
+                                    </a>
+                                    <a class="artifact-photo-link" href="assets/images/gamesetmatch-dashboard.png" target="_blank" rel="noopener">
+                                        <span class="artifact-photo-title">Dashboard</span>
+                                        <img class="artifact-photo" src="assets/images/gamesetmatch-dashboard.png" alt="Dashboard">
+                                    </a>
+                                    <a class="artifact-photo-link" href="assets/images/gamesetmatch-admin-tournament-creation.png" target="_blank" rel="noopener">
+                                        <span class="artifact-photo-title">Tournament Creation</span>
+                                        <img class="artifact-photo" src="assets/images/gamesetmatch-admin-tournament-creation.png" alt="Tournament creation">
+                                    </a>
+                                    <a class="artifact-photo-link" href="assets/images/gamesetmatch-admin-tournament-view.png" target="_blank" rel="noopener">
+                                        <span class="artifact-photo-title">Tournament View</span>
+                                        <img class="artifact-photo" src="assets/images/gamesetmatch-admin-tournament-view.png" alt="Tournament view">
+                                    </a>
+                                    <a class="artifact-photo-link" href="assets/images/gamesetmatch-tournament-registration.png" target="_blank" rel="noopener">
+                                        <span class="artifact-photo-title">Tournament Registration</span>
+                                        <img class="artifact-photo" src="assets/images/gamesetmatch-tournament-registration.png" alt="Tournament registration">
+                                    </a>
+                                    <a class="artifact-photo-link" href="assets/images/gamesetmatch-user-view.png" target="_blank" rel="noopener">
+                                        <span class="artifact-photo-title">User View</span>
+                                        <img class="artifact-photo" src="assets/images/gamesetmatch-user-view.png" alt="User view">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -111,14 +139,29 @@
                         <div class="project-columns">
                             <div class="project-col">
                                 <h4>Description</h4>
-                                <p class="project-desc">This site. A dependency-free static site (vanilla HTML, CSS, and JS &mdash; no build step) with a live weather-driven color theme, a horizontally-scrolling carousel, and section partials fetched at runtime.</p>
+                                <p class="project-desc courtiq-desc">
+                                    An orientation-based puzzle game built in a team of 3 on a custom Entity-Component-System (ECS) engine in C++ and OpenGL.
+                                    Players rotate the world to reorient gravity and solve their way through each level, evading enemies that chase the player with a BFS pathfinding AI.
+                                    The game blends 2D and 3D rendering techniques with sprite-sheet animation, and won Best Game out of 15 teams, as selected by an industry jury.
+                                </p>
+                                <h4>Tools</h4>
+                                <ul class="project-desc courtiq-desc courtiq-list">
+                                    <li><strong>Graphics:</strong> C++, OpenGL</li>
+                                    <li><strong>Architecture:</strong> custom Entity-Component-System (ECS) framework</li>
+                                    <li><strong>AI:</strong> BFS pathfinding for enemy pursuit</li>
+                                    <li><strong>Rendering:</strong> combined 2D and 3D techniques with sprite-sheet animation</li>
+                                </ul>
                             </div>
                             <div class="project-col-divider"></div>
                             <div class="project-col">
                                 <h4>Artifacts</h4>
                                 <div class="project-artifacts">
-                                    <a class="artifact-tile" href="https://github.com/fwang2000/fwang2000.github.io" target="_blank" rel="noopener">GitHub</a>
-                                    <a class="artifact-tile" href="https://fwang2000.github.io" target="_blank" rel="noopener">Live Site</a>
+                                    <a class="artifact-tile" href="https://github.com/fwang2000/Vertigo" target="_blank" rel="noopener">
+                                        <img class="project-icon" src="assets/images/github.png"/>
+                                    </a>
+                                    <a class="artifact-tile" href="https://www.youtube.com/watch?v=ptA22Ele9fc" target="_blank" rel="noopener">
+                                        <img class="project-icon" src="assets/images/youtube.png"/>
+                                    </a>
                                 </div>
                             </div>
                         </div>
